@@ -14,7 +14,7 @@ workflow {
             file(row.fastq_atac).findAll{it.name =~ /R1_001.fastq.gz$/},
             file(row.fastq_atac).findAll{it.name =~ /R2_001.fastq.gz$/}
         )}
-    COUNT(libraries,params.reference,params.feature_ref)
+    CELLRANGER_COUNT(libraries,params.reference,params.feature_ref)
     
 
 }
